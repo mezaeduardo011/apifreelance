@@ -1,0 +1,26 @@
+{
+    "name": "slim/catatumbo",
+    "description": "Desarrollo de Servicios RestFull con documentación",
+    "homepage": "http://github.com/gbolivar/catatumbo",
+    "license": "CC",
+    "authors": [
+        {
+            "name": "Gregorio Jose Bolivar Bolivar",
+            "email": "elalconxvii@gmail.com",
+            "homepage": "http://www.gregoriobolivar.com.ve/"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "slim/slim": "^3.1",
+        "slim/php-view": "^2.0",
+        "phpmailer/phpmailer": "^5.2"
+    },
+   
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+
+}
