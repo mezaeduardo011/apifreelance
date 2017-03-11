@@ -198,9 +198,13 @@
 <script type="text/javascript">
   function testInsertUsuario(){
 $.confirm({
-    title: 'Prompt!',
+    title: 'Registro de usuario',
     content: '' +
     '<form action="" class="formName">' +
+    '<div class="form-group">' +
+    '<label>Nombre</label>' +
+    '<input type="text" placeholder="nombre de usuario" class="nombre form-control" required />' +
+    '</div>' +    
     '<div class="form-group">' +
     '<label>Correo</label>' +
     '<input type="text" placeholder="correo" class="correo form-control" required />' +
@@ -223,17 +227,19 @@ $.confirm({
     '</form>',
     buttons: {
         formSubmit: {
-            text: 'Submit',
+            text: 'Enviar',
             btnClass: 'btn-blue',
             action: function () {
+              var nombre = this.$content.find('.nombre').val();
               var correo = this.$content.find('.correo').val();
               var contraseña = this.$content.find('.contraseña').val();
               var confirmacion_contraseña = this.$content.find('.confirmacion_contraseña').val();
               var id_perfil = this.$content.find('.id_perfil').val();
               $.ajax({
                   type: 'POST',
-                  url : 'usuarios/updateUsuario',
+                  url : 'usuarios/insertUsuario',
                   data: { 
+                      'nombre': nombre, 
                       'correo': correo, 
                       'contrasena': contraseña, 
                       'confirmacion_contrasena': confirmacion_contraseña, 

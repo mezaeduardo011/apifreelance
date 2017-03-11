@@ -46,7 +46,7 @@ $module=$common->getFileExecute(__DIR__);
 */
 
 // """ Method encargado de enviar las notificacione de mensaje de textos """
-    $app -> get('/'.$module.'/getUsuario/{id}', function($request, $response, $args) use ($connec,$sd){
+    $app -> get('/'.$module.'/getProyecto/{id}', function($request, $response, $args) use ($connec,$sd){
         $route = $request->getAttribute('route');
         $id = $route->getArgument('id');
         $conn = end($connec);

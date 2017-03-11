@@ -1,6 +1,17 @@
 <?php
+require_once('../lib/DriverDB/ConexionDataBase.class.php');
+
 class manageDataService {
+
+	static private $manageDataBase;
+
+	public function __construct() {
+		 $config = new ConfigDatabase();
+		 //echo $config->catatumbo()->driv;
+	}	
+
     public static function getData($conn,$sql,$connec) {
+    	
         $query = $conn->prepare($sql);
         $result=$query->execute();
         $data = $query->fetchAll(PDO::FETCH_ASSOC);
