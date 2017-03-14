@@ -1,7 +1,8 @@
 <?php
 // Desactivar toda notificación de error
 //error_reporting(0);
-
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: text/plain");
 date_default_timezone_set('America/La_Paz');
 include_once (__DIR__."/../lib/DriverDB/ConexionDataBase.class.php");
 

@@ -37,6 +37,7 @@ class manageDataService {
     }    
 
     public static function sendData($conn,$sql,$connec) {
+        echo $sql; die();
         $query = $conn->prepare($sql);
         $result=$query->execute();
         $connec->close_con();

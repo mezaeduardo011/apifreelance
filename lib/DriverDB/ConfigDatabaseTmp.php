@@ -4,7 +4,7 @@
   * @propiedad: catatumbo
   * @Autor: Gregorio Bolivar
   * @email: elalconxvii@gmail.com
-  * @Fecha de Creacion: 11/03/2017
+  * @Fecha de Creacion: 13/03/2017
   * @Auditado por: Gregorio J Bolívar B
   * @Descripción: Generado por el generador de codigo de router de webStores
   * @package: ConfigDatabase.php
@@ -33,9 +33,9 @@ public function catatumbo(){
   // Nombre base de datos
   $this->dbna = 'freelance';
   // Usuario de acceso a la base de datos
-  $this->user = 'root';
+  $this->user = 'em645jn';
   // Clave de ac  ceso a la base de datos
-  $this->pass = '123456';
+  $this->pass = '';
   return $this;
 }
 /** Fin del caso del method de catatumbo */
